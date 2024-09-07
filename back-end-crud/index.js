@@ -3,13 +3,12 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const MongoURl = process.env.MongooseUrl
 app.use(cors());
 app.use(bodyParser.json());
 
 mongoose
   .connect(
-    MongoURl
+"mongodb+srv://ibrahim:03124963808@ibrahim.pxylpua.mongodb.net/"
   )
   .then(() => console.log("connected"))
   .catch((err) => console.log("Connection failed: ", err));

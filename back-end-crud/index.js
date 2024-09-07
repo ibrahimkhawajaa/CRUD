@@ -3,7 +3,11 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-app.use(cors());
+app.use(cors({
+  origin:["https://crud-xdnx.vercel.app/"],
+  methods:["POST","DELETE","GET","PUT"],
+  credentials:true
+}));
 app.use(bodyParser.json());
 
 mongoose
